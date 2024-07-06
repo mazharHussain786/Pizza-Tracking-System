@@ -1,0 +1,40 @@
+we will use yarn to install
+npm (Node Package Manager):
+
+npm Node.js ka default package manager hai.
+Yeh package.json file ko use karke dependencies ko manage karta hai.
+Aap npm install command use karke packages install karte hain.
+Yarn:
+
+Yarn Facebook ne develop kiya tha.
+Yarn bhi package.json file ko use karta hai, lekin isme kuch additional features hain jo use ko aur efficient banate hain.
+
+
+
+Yarn kyun faster hai?
+Parallel Downloads: Yarn ek saath multiple packages download kar sakta hai, jabke npm sequentially (ek ke baad ek) packages download karta hai.
+Offline Cache: Yarn downloaded packages ko cache (yaad) me rakhta hai, to agle time jab aap same packages install karte hain to wo direct cache se install ho jata hai, jo kafi fast hota hai.
+Lock File: Yarn yarn.lock file generate karta hai jo exact version of dependencies ko ensure karta hai, isse install time me consistency aur speed dono improve hoti hain.
+Network Requests: Yarn network requests ko optimize karta hai, jo npm ke mukable me kam requests aur less latency ko result karta hai.
+
+yarn init -y
+yarn add pkgname
+
+"""""""""""""""""""""""""""""
+EJS (Embedded JavaScript)
+EJS ek templating engine hai jo HTML files mein dynamic content embed karne ki sahulat deti hai. Yeh JavaScript ko HTML ke andar directly use karne ka tareeqa hai, jo dynamic web pages banane mein madadgar hota hai.
+
+JavaScript Logic: Aap JavaScript logic ko directly HTML mein use kar sakte hain.
+Includes: Ek file ko doosri file mein include kar sakte hain, jisse code reuse aur modularity badh jaati hai.
+Conditionals and Loops: Aap if statements aur loops use kar sakte hain HTML mein
+<%=title %> dynamically write value of title
+
+""""""""""""""""""""""""""""""""""""""""""
+app.set('view engine', 'ejs'); yeh line Express ko batati hai ke jab bhi res.render method call hoga, to EJS files ko look for karega
+iske baghair render ko use nai kr skte
+
+
+git init 
+git status // show all folders inside root
+To skip posting all we will use 
+we will make .gitignore

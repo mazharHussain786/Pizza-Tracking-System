@@ -7,9 +7,12 @@ const app = express();
 
 const Port = process.env.Port || 3000;
 
+app.use(express.static("public")) 
+
 app.get("/", (req, res) => {
   res.render("home"); // we have already tell the path in below
 });
+
 
 app.use(expressLayout);
 

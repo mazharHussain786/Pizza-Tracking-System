@@ -22,7 +22,8 @@ yarn add pkgname
 
 """""""""""""""""""""""""""""
 EJS (Embedded JavaScript)
-EJS ek templating engine hai jo HTML files mein dynamic content embed karne ki sahulat deti hai. Yeh JavaScript ko HTML ke andar directly use karne ka tareeqa hai, jo dynamic web pages banane mein madadgar hota hai.
+EJS ek templating engine hai jo HTML files mein dynamic content embed karne ki sahulat deti hai.
+Yeh JavaScript ko HTML ke andar directly use karne ka tareeqa hai, jo dynamic web pages banane mein madadgar hota hai.
 
 JavaScript Logic: Aap JavaScript logic ko directly HTML mein use kar sakte hain.
 Includes: Ek file ko doosri file mein include kar sakte hain, jisse code reuse aur modularity badh jaati hai.
@@ -33,8 +34,13 @@ Conditionals and Loops: Aap if statements aur loops use kar sakte hain HTML mein
 app.set('view engine', 'ejs'); yeh line Express ko batati hai ke jab bhi res.render method call hoga, to EJS files ko look for karega
 iske baghair render ko use nai kr skte
 
+laravel webpack is tool to covnvert scss into css and or modern js to js
+
 
 git init 
 git status // show all folders inside root
+git add. // it select all files present 
+git commit -m 'intial message'
 To skip posting all we will use 
 we will make .gitignore
+we will keep that pkg names in that files ..

@@ -1,0 +1,60 @@
+<!-- shared code is kept here -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/css/app.css">
+    <title>RealTime Pizza App</title>
+</head>
+
+<body>
+
+    <!-- to center it -->
+    <!-- it contains two tags firstly it will it will center then vertically align and push to
+  right -->
+    <nav class="container mx-auto flex items-center justify-between py-4">
+        <div>
+            <img src="/img/logo.png" alt="Logo">
+        </div>
+
+        <div>
+            <ul class="flex items-center">
+                <li class="ml-6"><a href="/">Menu</a></li>
+                <li class="ml-6"><a href="">Offers</a></li>
+                <% if (user) { %>
+                    <li class="ml-6">
+                        <form id="logout" action="/logout" method="post">
+                        </form>
+                        <a href="" onclick="document.getElementById('logout').submit(); return false;">Logout</a>
+                    </li>
+
+               <% } else { %>
+                <li class="ml-6"><a href="/register">Register</a></li>
+                <li class="ml-6"><a href="/login">Login</a></li>
+                <% }%>
+                <li class="ml-6"><a href="/cart" class="inline-block px-4 py-2 rounded-full flex items-center">
+                        <span id="total_Quantity" class="font-bold text-white pr-2">
+                            <%=session.cart ? session.cart.total_Quantity : '' %>
+                        </span>
+                        <img src="/img/cart.png" alt="Cart"></a></li> 
+            </ul>
+
+
+        </div>
+
+    </nav>
+    <!-- the dynamic content will be embed here .. it is like shared view -->
+    <%- body %>
+
+</body>
+<script src="/js/app.js"></script>
+
+</html>

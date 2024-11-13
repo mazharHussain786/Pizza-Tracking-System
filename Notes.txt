@@ -44,3 +44,29 @@ git commit -m 'intial message'
 To skip posting all we will use 
 we will make .gitignore
 we will keep that pkg names in that files ..
+
+
+Agar aapka ES module file C:/Users/Allah Waly/Desktop/PIzzaSystem/server.js hai, toh:
+
+import.meta.url return karega: file:///C:/Users/Allah%20Waly/Desktop/PIzzaSystem/server.js
+fileURLToPath(import.meta.url) convert karega isko: C:/Users/Allah Waly/Desktop/PIzzaSystem/server.js
+Aur const __filename store karega ye pa
+
+
+now we will use  express-session(middleware) and MongoDbstore (connect-mongo) it takes session
+as argument to handle sessions
+express-session attaches the object session with requests
+setup dotenv
+setup middleware
+
+express-flash  to return messages to front end as viewbag
+when we use flash then an object named messages is appeared in frontend
+we can simply then pick that message by messages.propertyname
+
+
+urlEncodedData -> when we take data through form then it can be in form of urlEncodedData
+like json but it is in form of key value like password=123&name=Mazhar 
+json is in form of object..
+
+
+

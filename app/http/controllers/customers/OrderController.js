@@ -27,7 +27,7 @@ const postOrder = async (req, res) => {
 const getOrders=async(req,res)=>
 {   
       const orders = await orderModel.find({customerId:req.user._id},null,{sort:{'createdAt':-1}})
-      console.log(orders)
+      res.set('Cache-Control', 'no-store, no-cache, must-revalidate, private');
       res.render('customers/order',{orders,moment:moment})
 }
 export { postOrder,getOrders };

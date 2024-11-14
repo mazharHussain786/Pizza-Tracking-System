@@ -4,7 +4,7 @@ import { initAdmin } from "./admin.js"
 
 
 
-initAdmin()
+
 let btn_list=document.querySelectorAll(".add-to-cart")
 
 

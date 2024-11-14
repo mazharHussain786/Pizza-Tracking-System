@@ -18,4 +18,13 @@ const adminOrders = async (req, res) => {
     }
 };
 
-export{adminOrders}
+const changeStatus=async(req,res)=>
+{
+    const {orderId,status}=req.body
+   const order= await orderModel.findById(orderId)
+   order.status=status
+   const result=await order.save()
+   return res.render('AdminOrders');
+}
+
+export{adminOrders,changeStatus}

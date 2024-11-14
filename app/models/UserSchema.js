@@ -45,6 +45,21 @@ UserSchema.methods.comparePassword=async function(pasword)
 const userModel=mongoose.model('User',UserSchema);
 
 
+// const user={
+//     name:"ImranKhan",
+//     email:"imran@gmail.com",
+//     password:"123",
+//     role:"admin"
+// };
+
+// ( async()=>
+// {
+//     await userModel.create(user)
+//     console.log("user is created")
+// })()
+
+
+
 
 
 export{userModel}

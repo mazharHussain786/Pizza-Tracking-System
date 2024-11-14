@@ -27,8 +27,9 @@
 
 
 </section>
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
 <script>
+
 
 initAdmin()
 
@@ -107,15 +108,19 @@ function generateMarkup(orders) {
                     </div>
                 </div>
             </td>
-            <td class="border px-4 py-2">
-                 ${ (order.createdAt)}
-            </td>
-            <td class="border px-4 py-2">
+              <td class="border px-4 py-2">
                 ${ order.paymentStatus ? 'paid' : 'Not paid' }
             </td>
+            <td class="border px-4 py-2">
+                 ${moment(order.createdAt).format('hh:mm:A')}
+            </td>
+          
         </tr>
     `
     }).join('')
 }
 }
+
+
 </script>
+

@@ -34,6 +34,17 @@ const postRegister = async (req, res) => {
   }
 };
 
+const _getredirectUrl=(req)=>
+{
+  if(req.user.role==="admin")
+  {
+    return "/admin/orders"
+  }
+  return "/customer/orders"
+  
+
+}
+
 const postLogin=async(req,res,next)=>
 {
   const cart=req.session?.cart;
@@ -59,7 +70,7 @@ const postLogin=async(req,res,next)=>
       return next(err)
      }
      req.session.cart=cart
-    return res.redirect("/")
+   return res.redirect(_getredirectUrl(req))
   })
 
  })(req,res,next)
